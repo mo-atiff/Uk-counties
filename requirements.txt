@@ -2,4 +2,4 @@ numpy==1.23.3
 pandas==1.5.3
 plotly==5.13.0
 streamlit==1.25.0
-streamlit_gsheets==0.0.1
+streamlit-gsheets @ git+https://github.com/streamlit/gsheets-connection@01a419c707939a7ec0840ec19cfb7f9a60a55130
