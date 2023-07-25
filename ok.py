@@ -39,8 +39,7 @@ counties = st.selectbox('Select a County below', list(lats_longs.keys()))
 # @st.cache
 def county_select(county):
     conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-    data = conn.read(spreadsheet=counties)
-    # path = "C:\\Users\\ATIF SHAIK\\crimes\\{}.csv".format(county)
+    data = conn.read(spreadsheet=county)
     crime = pd.DataFrame(data)
     return crime
 
