@@ -1,16 +1,5 @@
-# example/st_app.py
-
-# import streamlit as st
-# from streamlit_gsheets import GSheetsConnection
-
-# url = "https://docs.google.com/spreadsheets/d/12kjQ2E9sHm0jCkjYkk6OvWPjMfCsw2VQWbX4vG3XljA/edit?usp=sharing"
-
-# conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-
-# data = conn.read(spreadsheet=url)
-# st.dataframe(data.head())
-
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 import plotly.express as px
 import pandas as pd
 import numpy as np
