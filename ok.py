@@ -36,13 +36,14 @@ counties = st.selectbox('Select a County below', list(lats_longs.keys()))
 
 # but = st.button('SHOW')
 
-avon_somerset = "https://docs.google.com/spreadsheets/d/1PqhZBm1PGWBPqoyOzm6xcBMS54FpvPEk7PPzCBHGPOE/edit?usp=sharing"
-cambridgeshire = "https://docs.google.com/spreadsheets/d/10r6kO4NO0TpQcva1nB0g7w0KVJvse7V6iFXtU2FsiWc/edit?usp=sharing"
-durhum = "https://docs.google.com/spreadsheets/d/1I-VUDGyP8H2cUK9ySgayI0m-9A7DXrRi9PJQ2ZTInjg/edit?usp=sharing"
-lincolnshire = "https://docs.google.com/spreadsheets/d/1ZMY0tRMQ4bpKdWKQX_Wt68_W-kryMQE394u4PWkOfmg/edit?usp=sharing"
-london = "https://docs.google.com/spreadsheets/d/19uxegbh_a_zAMABo2z4HOyyP40vyD8LC4VKJ35ThKsE/edit?usp=sharing"
-north_yorkshire = "https://docs.google.com/spreadsheets/d/1Hbb4tHbAtXXNF2qu9rLkJeAc6V6aTj_8LkTKi1ESxLA/edit?usp=sharing"
-thames_valley = "https://docs.google.com/spreadsheets/d/1-FPvtBAYRNIEiYAet17qNOaFXRokbYm5jOyYinrBmDM/edit?usp=sharing"
+avon_somerset = st.secrets["avon_somerset"]
+cambridgeshire = st.secrets["cambridgeshire"]
+durhum = st.secrets["durhum"]
+lincolnshire = st.secrets["lincolnshire"]
+london = st.secrets["london"]
+north_yorkshire = st.secrets["north_yorkshire"] 
+thames_valley = st.secrets["thames_valley"]
+
 
 # @st.cache
 def county_select(county):
