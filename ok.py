@@ -20,18 +20,10 @@ lats_longs = {'avon_somerset' : [51.375801, -2.359904], 'cambridgeshire' : [52.2
                'north_yorkshire' : [53.958332, -1.080278], 'thames_valley' : [51.5074, -0.1278]}
 
 
-# avon_somerset = st.secrets["avon_somerset"]
-# cambridgeshire = st.secrets["cambridgeshire"]
-# durhum = st.secrets["durhum"]
-# lincolnshire = st.secrets["lincolnshire"]
-# london = st.secrets["london"]
-# north_yorkshire = st.secrets["north_yorkshire"] 
-# thames_valley = st.secrets["thames_valley"]
-
 lats_longs2 = {
     "avon_somerset": st.secrets["avon_somerset"],
     "cambridgeshire": st.secrets["cambridgeshire"],
-    "durham": st.secrets["durhum"],
+    "durhum": st.secrets["durhum"],
     "lincolnshire": st.secrets["lincolnshire"],
     "london": st.secrets["london"],
     "north_yorkshire": st.secrets["north_yorkshire"] ,
