@@ -20,18 +20,23 @@ lats_longs = {'avon_somerset' : [51.375801, -2.359904], 'cambridgeshire' : [52.2
                'north_yorkshire' : [53.958332, -1.080278], 'thames_valley' : [51.5074, -0.1278]}
 
 
+# avon_somerset = st.secrets["avon_somerset"]
+# cambridgeshire = st.secrets["cambridgeshire"]
+# durhum = st.secrets["durhum"]
+# lincolnshire = st.secrets["lincolnshire"]
+# london = st.secrets["london"]
+# north_yorkshire = st.secrets["north_yorkshire"] 
+# thames_valley = st.secrets["thames_valley"]
 
-# counties = st.selectbox('Select a County below', list(lats_longs.keys()))
-
-# but = st.button('SHOW')
-
-avon_somerset = st.secrets["avon_somerset"]
-cambridgeshire = st.secrets["cambridgeshire"]
-durhum = st.secrets["durhum"]
-lincolnshire = st.secrets["lincolnshire"]
-london = st.secrets["london"]
-north_yorkshire = st.secrets["north_yorkshire"] 
-thames_valley = st.secrets["thames_valley"]
+lats_longs2 = {
+    "avon_somerset": st.secrets["avon_somerset"],
+    "cambridgeshire": st.secrets["cambridgeshire"],
+    "durham": st.secrets["durhum"],
+    "lincolnshire": st.secrets["lincolnshire"],
+    "london": st.secrets["london"],
+    "north_yorkshire": st.secrets["north_yorkshire"] ,
+    "thames_valley":  st.secrets["thames_valley"]
+}
 
 counties = st.selectbox('Select a County below', list(lats_longs.keys()))
 
@@ -39,7 +44,7 @@ counties = st.selectbox('Select a County below', list(lats_longs.keys()))
 # @st.cache
 def county_select(county):
     conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-    data = conn.read(spreadsheet=county)
+    data = conn.read(spreadsheet=lats_longs2[county])
     crime = pd.DataFrame(data)
     return crime
 
