@@ -21,7 +21,7 @@ lats_longs = {'avon_somerset' : [51.375801, -2.359904], 'cambridgeshire' : [52.2
 
 
 
-counties = st.selectbox('Select a County below', list(lats_longs.keys()))
+# counties = st.selectbox('Select a County below', list(lats_longs.keys()))
 
 # but = st.button('SHOW')
 
@@ -32,6 +32,8 @@ lincolnshire = st.secrets["lincolnshire"]
 london = st.secrets["london"]
 north_yorkshire = st.secrets["north_yorkshire"] 
 thames_valley = st.secrets["thames_valley"]
+
+counties = st.selectbox('Select a County below', list(lats_longs.keys()))
 
 
 # @st.cache
