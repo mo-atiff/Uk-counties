@@ -41,7 +41,7 @@ def county_select(county):
     conn = st.experimental_connection("gsheets", type=GSheetsConnection)
     data = conn.read(spreadsheet=counties)
     # path = "C:\\Users\\ATIF SHAIK\\crimes\\{}.csv".format(county)
-    crime = pd.read_csv(data)
+    crime = pd.DataFrame(data)
     return crime
 
 
